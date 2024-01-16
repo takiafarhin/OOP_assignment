@@ -10,14 +10,4 @@ public  class Room {
         this.numberOfRooms = numberOfRooms;
     }
 
-    public void isAvailable(){
-        if(numberOfRooms!=0){
-            status= "Available";
-            numberOfRooms--;
-        }
-        else{
-            status="Not Available";
-        }
-    }
-
 }

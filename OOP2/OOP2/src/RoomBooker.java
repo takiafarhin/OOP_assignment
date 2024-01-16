@@ -1,18 +1,8 @@
 public class RoomBooker {
-    Customer customer;
-    Room room;
     boolean isAvailable;
 
-
-    public RoomBooker(Customer customer, Room room, int numberOfRooms, String checkInDate, String checkOutDate, String typeOfRoom, String status, String name, String address, String phoneNumber, String email, String creditCardNumber) {
-        this.customer = customer;
-        this.room = room;
-        this.isAvailable = isAvailable;
-
-    }
-
-    public void statusChecking() {
-        if (room.status == "Available") {
+    public void statusChecking(Room room) {
+        if (room.status.equals("Available")) {
             isAvailable = true;
             System.out.println("Room is available");
         } else {
@@ -21,21 +11,18 @@ public class RoomBooker {
         }
     }
 
-    public void roomBooking() {
-        if (isAvailable == true) {
+    public void roomBooking(Room room) {
+        if (isAvailable) {
             System.out.println("Room is booked");
-            isAvailable=false;
         } else {
             System.out.println("Room is not booked");
         }
-
     }
 
-    public void cancelBooking(){
-        if(isAvailable!=true){
+    public void cancelBooking(Room room) {
+        if (!isAvailable) {
             System.out.println("Room is cancelled");
-        }
-        else{
+        } else {
             System.out.println("Room is not cancelled");
         }
     }
