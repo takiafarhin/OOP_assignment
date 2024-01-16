@@ -4,9 +4,12 @@ public class Landary  {
 
     double Price;
 
+    
+
     public Landary(String ServiceName,  double Price) {
         this.ServiceName = ServiceName;
         this.Price = Price;
+
     }
 
 }

@@ -12,6 +12,8 @@ public class LandaryOrder implements BillGenerator{
         this.landary = landary;
     }
 
+
+
     public double generateBill(){
 
        return price*quantity;
